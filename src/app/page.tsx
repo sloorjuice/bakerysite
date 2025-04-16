@@ -7,25 +7,28 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen bg-pink-50 text-gray-800">
         {/* Hero Section */}
-        <section className="relative bg-yellow-200 py-8 pl-8 pr-8">
-          <h1 className="text-5xl font-bold text-brown-800">Welcome to the Sweat Treat Bakery</h1>
-          <p className="mt-1 text-lg">Freshly baked goods made with love and care every day!</p>
-          <p className="text-lg">Owned locally by your neighbors!</p>
-          <div className="flex justify-between mt-6 pl-4 pr-4 gap-4">
+        <section className="relative bg-yellow-200 py-8 px-4 sm:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-brown-800 text-center sm:text-left">
+            Welcome to the Sweet Treat Bakery
+          </h1>
+          <p className="mt-2 text-base sm:text-lg text-center sm:text-left">
+            Freshly baked goods made with love and care every day!
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-between mt-6 gap-4">
             <Image
               src="/bakery-hero.jpg"
               alt="Bakery Hero"
               width={750}
               height={350}
-              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2 "
+              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
             />
             <Image
-            src="/bakery-hero.jpg"
-            alt="Bakery Hero"
-            width={750}
-            height={350}
-            className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2 "
-          />
+              src="/bakery-hero.jpg"
+              alt="Bakery Hero"
+              width={750}
+              height={350}
+              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
+            />
           </div>
         </section>
 
