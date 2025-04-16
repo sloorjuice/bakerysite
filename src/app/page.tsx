@@ -38,14 +38,15 @@ export default function Home() {
           <p className="mt-4 text-lg">
             At Sweet Treats Bakery, we specialize in crafting delicious pastries, cakes, and breads using the finest ingredients. Stop by and taste the difference!
           </p>
-          <div className="mt-4 flex items-center justify-center gap-4">
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Image
               src="/family.jpg"
               alt="About Us"
               width={400}
               height={400}
-              className="rounded-full shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"/>
-            <p className="text-lg max-w-sm font-bold">
+              className="rounded-full shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
+            />
+            <p className="text-lg max-w-sm font-bold text-center sm:text-left">
               Owned by the Smith family, we have been serving the community for over 10 years. Our passion for baking is evident in every bite of our treats.
             </p>
           </div>
