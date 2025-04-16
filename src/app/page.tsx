@@ -19,14 +19,14 @@ export default function Home() {
               src="/bakery-hero.jpg"
               alt="Bakery Hero"
               width={750}
-              height={350}
+              height={250}
               className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
             />
             <Image
-              src="/bakery-hero.jpg"
-              alt="Bakery Hero"
+              src="/stock.jpg"
+              alt="Bakery"
               width={750}
-              height={350}
+              height={250}
               className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
             />
           </div>
@@ -50,7 +50,7 @@ export default function Home() {
               Owned by the Smith family, we have been serving the community for over 10 years. Our passion for baking is evident in every bite of our treats.
             </p>
           </div>
-          <div>
+          <div className="pt-2">
             <p className="font-bold">Contact us at:</p>
             <p>(123) 456-7890</p>
             <p>Contact@SweatTreatBakery.com</p>
