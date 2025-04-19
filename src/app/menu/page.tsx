@@ -1,8 +1,20 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import Modal from "@/Components/Modal";
 
 export default function Menu() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openModal = (image: string) => setSelectedImage(image);
+  const closeModal = () => setSelectedImage(null);
+
   return (
     <main className="min-h-screen bg-pink-50 text-gray-800">
+      {/* Modal */}
+      {selectedImage && <Modal imageSrc={selectedImage} onClose={closeModal} />}
+
       <section className="py-8 px-8 text-center">
         <h1 className="text-4xl font-bold text-brown-800">Our Menu</h1>
         <p className="text-lg">
@@ -13,7 +25,10 @@ export default function Menu() {
       <section className="px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 pb-6">
           {/* Item 1 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/cupcake.jpg")}
+          >
             <Image
               src="/cupcake.jpg"
               alt="Cupcake"
@@ -26,7 +41,10 @@ export default function Menu() {
             <p className="mt-2 font-bold">$3.50 each</p>
           </div>
           {/* Item 2 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/bread.jpg")}
+          >
             <Image
               src="/bread.jpg"
               alt="Fluffy Bread"
@@ -39,7 +57,10 @@ export default function Menu() {
             <p className="mt-2 font-bold">$5.00 per loaf</p>
           </div>
           {/* Item 3 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/cake.jpg")}
+          >
             <Image
               src="/cake.jpg"
               alt="Custom Cakes"
@@ -52,7 +73,10 @@ export default function Menu() {
             <p className="mt-2 font-bold">Starting at $25.00</p>
           </div>
           {/* Item 4 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/cookies.jpg")}
+          >
             <Image
               src="/cookies.jpg"
               alt="Cookies"
@@ -65,7 +89,10 @@ export default function Menu() {
             <p className="mt-2 font-bold">$1.50 each</p>
           </div>
           {/* Item 5 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/rolls.jpg")}
+          >
             <Image
               src="/rolls.jpg"
               alt="Muffins"
@@ -78,7 +105,10 @@ export default function Menu() {
             <p className="mt-2 font-bold">$3.50 each</p>
           </div>
           {/* Item 6 */}
-          <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
+          <div
+            className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2 cursor-pointer"
+            onClick={() => openModal("/doughnuts.jpg")}
+          >
             <Image
               src="/doughnuts.jpg"
               alt="Doughnuts"
