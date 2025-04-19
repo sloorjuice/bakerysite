@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Navbar from "../Components/Navbar";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main className="min-h-screen bg-pink-50 text-gray-800">
         {/* Hero Section */}
         <section className="relative bg-yellow-200 py-8 px-4 sm:px-8">
@@ -14,20 +12,20 @@ export default function Home() {
           <p className="mt-2 text-base sm:text-lg text-center sm:text-left">
             Freshly baked goods made with love and care every day!
           </p>
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between mt-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
             <Image
               src="/bakery-hero.jpg"
               alt="Bakery Hero"
               width={750}
               height={250}
-              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
+              className="rounded-lg shadow-lg w-full h-auto transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
             />
             <Image
               src="/stock.jpg"
               alt="Bakery"
               width={750}
               height={250}
-              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
+              className="rounded-lg shadow-lg w-full h-auto transition-transform duration-300 hover:scale-101 hover:-translate-y-2"
             />
           </div>
         </section>
@@ -60,21 +58,21 @@ export default function Home() {
         {/* Featured Products */}
         <section className="bg-white py-16 px-8">
           <h2 className="text-3xl font-semibold text-center">Our Favorites</h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
             {/* Product 1 */}
-            <div className="rounded-lg border p-4 shadow-sm">
+            <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
               <Image
-                src="/cupcake.jpg"
-                alt="Cupcake"
+                src="/rolls.jpg"
+                alt="Cinnamon Rolls"
                 width={300}
                 height={200}
                 className="rounded-lg"
               />
-              <h3 className="mt-4 text-xl font-medium">Delicious Sweets</h3>
-              <p className="mt-2 text-gray-600">Perfectly sweet in a variety of flavors.</p>
+              <h3 className="mt-4 text-xl font-medium">Our Fluffy Cinnamon Rolls</h3>
+              <p className="mt-2 text-gray-600">Perfectly Warm, Gooey and Creamed</p>
             </div>
             {/* Product 2 */}
-            <div className="rounded-lg border p-4 shadow-sm">
+            <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
               <Image
                 src="/bread.jpg"
                 alt="Artisan Bread"
@@ -86,7 +84,7 @@ export default function Home() {
               <p className="mt-2 text-gray-600">Freshly baked bread with a crispy crust and soft interior.</p>
             </div>
             {/* Product 3 */}
-            <div className="rounded-lg border p-4 shadow-sm">
+            <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
               <Image
                 src="/cake.jpg"
                 alt="Custom Cakes"
@@ -99,11 +97,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-800 py-8 text-center text-white">
-          <p>&copy; 2025 Sweet Treats Bakery. All rights reserved.</p>
-        </footer>
       </main>
     </>
   );
