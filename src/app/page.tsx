@@ -69,7 +69,7 @@ export default function Home() {
                 className="rounded-lg"
               />
               <h3 className="mt-4 text-xl font-medium">Our Fluffy Cinnamon Rolls</h3>
-              <p className="mt-2 text-gray-600">Perfectly Warm, Gooey and Creamed</p>
+              <p className="mt-2 text-gray-600">Perfectly Warm, Gooey and Creamy.</p>
             </div>
             {/* Product 2 */}
             <div className="rounded-lg border p-4 shadow-sm hover:scale-101 hover:-translate-y-2">
